@@ -86,4 +86,4 @@ The analysis has also revealed that external elements like the month and day sho
 
 ## Want to connect/have a question? 
 [Linkedin](https://www.linkedin.com/in/kishawndorman/)
-[Gmail](kishawn106@gmail.com)
+
