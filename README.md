@@ -20,48 +20,49 @@ The aim of the report was to help institutions improve student satisfaction. Thi
 2.	Understand which factors have the most significant effect on student satisfaction in comparison to others.
 
 #### Analysis
-The Turkiye dataset was the focal instrument of this analysis as it was used to visualize our understanding of the factors that may affect student satisfaction (through firstly statistical charts). They revealed that there was a bit of uneven spread of students across the different courses and instructors of the data. However, with the exception of course 12 there is a minimum average of 100 student observations per course and 750 student observations per instructor. This information helped to add credibility to the relevance of the analysis. 
+The Turkiye dataset  was used to understand the data and factors that may affect student satisfaction (through firstly statistical charts). They revealed that there was a bit of uneven spread of students across the different courses and instructors of the data. However, with the exception of course 12 there is a minimum average of 100 student observations per course and 750 student observations per instructor. This information helped to add credibility to the relevance of the analysis. 
 
-Before using inferential statistics, the dataset was modified because the large number of student observations captured for the dataset, would have made it challenging to analysis. As a result, to aid the efficiency and reduce the complexity of the analysis, a dimensionality reduction was carried out using a Principal Components Analysis (PCA) test and a parallel analysis test. Two new factors was formed; instructor & course satisfaction (represent student satisfaction).
+Before using inferential statistics, the dataset was modified because the large number of student observations captured for the dataset, would have made it challenging to analyse. As a result, to aid the efficiency and reduce the complexity of the analysis, a dimensionality reduction was carried out using a Principal Components Analysis (PCA) and then a parallel analysis test (as second confirmation). Two new factors/variables was formed; instructor & course satisfaction (which together represent student satisfaction).
 
-The inferential statistics method (manova) used, revealed that student satisfaction is affect by the type of instructor and course students are assigned however, the effect they had were very small according to the dataset. From further analysis it appears that students assigned to instructor 2 and/or on course 8 showed the most satisfaction with their instructor and students assigned to instructor 1 and/or on course 9 & 10 showed the most satisfaction with their course than students from other instructors.
+The inferential statistics method (MANOVA) used, revealed that student satisfaction is affect by the type of instructor and course students' are assigned however, the effect they had were very small according to the dataset.
 
 #### Recommendations
-Since the analysis results indicate that the type of instructor and the course students are assigned to can have an effect on their overall satisfaction with an institution. To ensure the student satisfaction levels are maintained educational institutions may need to ensure that a good teaching calibre is continuously shown by all instructors at the institution and the tutorial sessions for courses are tailored to the expectations of students.
+Since the analysis results indicate that the type of instructor and the course students are assigned to can have an effect on their overall satisfaction with an institution. To ensure the student satisfaction levels are maintained educational institutions may need to ensure that a good teaching calibre is continuously shown by all instructors at the institution and the tutorial sessions for courses are tailored to the expectations and interests of students.
 
 #### Limitations
-	The results of this dataset cannot be generalised as meaning the same effects for other educational institutions.
-	Outliners issue in normality assumption.
-	The data may not be an accurate representation of the opinions of students because of limitations of the data collection method (Likert-scale style questions).
-	Loss of information because of the dimensionality reduction.
+- The results of this dataset cannot be generalised as meaning the same effects for other educational institutions.
+- Outliners issue in normality assumption.
+- The data may not be an accurate representation of the opinions of students because of the data collection method (Likert-scale style questions) used.
+-	Loss of information because of the dimensionality reduction.
 
 ### Company B
 #### Executive summary
-Businesses around the world are constantly seeking progressive improvements in the way they carry out business. Data-driven research have been found to be one of the most effective ways to help compose effective strategies in all aspects of a business. For this reason an analysis was carried out on data containing client information for German-Hellenic bank. 
+Businesses around the world are constantly seeking progressive improvements in the way they carry out business. Data-driven research have been found to be one of the most effective ways to help compose effective strategies in all aspects of a business. For this reason an analysis was carried out on data containing client information for a bank. 
 
-Arising out of the analysis, a few factors that capture clients’ personal demographics, previous and present campaign information and clients’ opinions stood out as being great predictors of clients’ age and housing loan status. For German-Hellenic bank understanding them can help the bank’s marketing team re-evaluate their product /service approach and their strategic objectives.
+Arising out of the analysis, a few factors that capture clients’ personal demographics, previous and present campaign information and clients’ opinions stood out as being great predictors of clients’ age and housing loan status. For the bank understanding them can help it’s marketing team re-evaluate their product/service approach and their strategic objectives.
 
 #### Aim and Objectives
-The aim of the report is to derive useful data for the German-Hellenic bank using a data-driven analysis. This was accomplished through the following objectives:
+The aim of the report is to derive useful data for the bank using a data-driven analysis. This was accomplished through the following objectives:
 1.	Determine what factors can significantly predict the age of clients and whether or not clients have a housing loan.
 2.	Gauge the performance of these factors when making predictions.
 
 #### Analysis
-The data used for the analysis featured a substantial amount of client information and as with any analysis having a large amount of data is ideal. The analysis commenced by testing the predictive ability of all other the factors in the data provided against clients age and their housing loan status (separately).  For clients age the job, marital status, educational background, account balance, housing loan status, contact method used, month contacted and clients’ opinion of the previous marketing campaign when modelled together appear to be a good predictor of clients’ age. These factors/predictors accounted for 42% of the predictability element of clients’ age.
+The data used for the analysis featured a substantial amount of client information and as with any analysis having a large amount of data is ideal. The analysis commenced by testing the predictive ability of all other the factors in the dataset provided against clients age and their housing loan status (separately).  For clients age; job, marital status, educational background, account balance, housing loan status, contact method used, month contacted and clients’ opinion of the previous marketing campaign when modelled together appear to be a good predictor of clients’ age. These factors/predictors accounted for 42% of the predictability element of clients’ age.
 
-In the case of the housing loan status of clients their age, type of job, marital status, educational background, account balance, contact method used, day of last contact, month contacted, contacts during the present campaign, days post contact and clients’ opinion of the previous marketing campaign when modelled together appear to be a good predictor of clients’ housing loan status. In further accessing the predictors of clients’ housing loan status probabilities of housing loan’s response to increases and decreases to the predictors was captured.
+In the case of the housing loan status of clients; age, type of job, marital status, educational background, account balance, contact method used, day of last contact, month contacted, contacts during the present campaign, days post contact and clients’ opinion of the previous marketing campaign when modelled together appear to be a good predictor of clients’ housing loan status. In further accessing the predictors of clients’ housing loan status probabilities of housing loan’s response to increases and decreases to the predictors was captured.
 
 The summary of the probabilities show that primarily the type of job, method of contact, the last month of contact and the outcome of the previous marketing campaign decreased the likelihood of a client having a housing loan. However, clients in blue-collar jobs, contacted with an unknown method and/or during the month of May greatly increased the likelihood of a client having a housing loan. 
-Recommendations
-The analysis results revealed that there are quite a few factors that can act as predictors for clients’ age and housing loan status as mentioned previously.  With this in mind, German-Hellenic bank marketing department should make their goods/services more appealing to clients by being more strategic and specific about the clients to be targeted for marketing campaigns, products, offers and/or promotions. 
 
-The analysis has also revealed that external elements like the month and day should most certainly be consider as they were both proven to be significant predictors to determining what kind clients are engaged. For example, a house loan promotion with low interest rates for clients under 30 years old can be ran at the end of the month. This would attract clients in blue-collar jobs because of its availability around (as these clients typically receive their salary around that time) and many clients are potentially under 30 years. 
+#### Recommendations
+The analysis results revealed that there are quite a few factors that can act as predictors for clients’ age and housing loan status as mentioned previously.  With this in mind, The bank's marketing department should make their goods/services more appealing to clients by being more strategic and specific about the clients to be targeted for marketing campaigns, products, offers and/or promotions. 
+
+The analysis has also revealed that external elements like the month and day should most certainly be consider as they were both proven to be significant predictors to determining what kind clients are engaged. For example, a house loan promotion with low interest rates for clients under 30 years old can be ran at the end of the month. This would attract clients in blue-collar jobs because of its availability (as these clients typically receive their salary around that time) and because the majority of clients at this bank is under 30 years based on the data. 
 
 
 #### Limitations
-	The significance of the test maybe become biased as the p-value maybe affected by the normality issue
-	Linear correlation between independent variables (predictors) diminish their predictive power
-	The data collected could be inaccurate or outdated which would skew the outcome of the analysis.
+-	The significance of the test may become biased as the p-value maybe affected by the normality issue.
+-	Linear correlation between independent variables (predictors) diminish their predictive power.
+-	The data collected could be inaccurate or outdated which would skew the outcome of the analysis.
 
 
 
@@ -84,4 +85,5 @@ The analysis has also revealed that external elements like the month and day sho
 - stats
 
 ## Want to connect/have a question? 
-[linkedin](https://www.linkedin.com/in/kishawndorman/)
+[Linkedin](https://www.linkedin.com/in/kishawndorman/)
+[Gmail](kishawn106@gmail.com)
