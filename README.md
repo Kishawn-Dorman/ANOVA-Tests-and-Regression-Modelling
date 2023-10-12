@@ -18,6 +18,7 @@ The “Turkiye Student Evaluation” dataset comprise of 5,820 (observations) st
 
 ![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/85e7db6f-c6d8-4c7c-90d6-1cfe21d5881f)
 
+
 Figure 1
 
 Figure 1 above shows that instructor 3 has almost two times (2x) the amount of students than instructor 1 & 2 combined. The credibility of instructor impact in the analysis may be weaken by this because of the unequal instructor groups.
