@@ -94,10 +94,9 @@ The parametric assumptions of normality and equal sample group sizes have both b
 #### Multivariate Analysis
 ##### Multivariate ANOVA 
 
-                  Run a MANOVA test because its suited to running a test with 2 DV's and factor IV's.
-           Also running a regular ANOVA test multiple times can inflate type I errors. MANOVA avoids this. 
-                       fit <- manova(cbind(df$InstrSat, df$CourseSat) ~ df$instr + df$class)
-                       summary(fit)
+                  Model R Code:
+                  fit <- manova(cbind(df$InstrSat, df$CourseSat) ~ df$instr + df$class)
+                  summary(fit)
 
 After running the omnibus test, H1 was confirmed, resulting in H0 being rejected. Manova showed a significant main effect of instructor [F(2,5806) = 39.64, p < 0.001, V = 0.03]  and class [F(11,5806) = 11.55, p < 0.001, V = 0.04] on InstrSat and CourseSat. 
 
