@@ -93,16 +93,13 @@ The parametric assumptions of normality and equal sample group sizes have both b
 
 #### Multivariate Analysis
 ##### Multivariate ANOVA 
-
-                  Model R Code:
-                  fit <- manova(cbind(df$InstrSat, df$CourseSat) ~ df$instr + df$class)
-                  summary(fit)
-
 After running the omnibus test, H1 was confirmed, resulting in H0 being rejected. Manova showed a significant main effect of instructor [F(2,5806) = 39.64, p < 0.001, V = 0.03]  and class [F(11,5806) = 11.55, p < 0.001, V = 0.04] on InstrSat and CourseSat. 
 
 Further investigation was carried out by running individual ANOVAs on the DVs. They showed that the results from both the MANOVA and ANOVAs confirmed instructors and courses having an effect on instructor and course satisfaction. However, the effect size (η2) and Pillai-Bartlet trace measurement (V) both indicate that their effect on these two dependent variables (DV) are minor.
+
 DV1 (InstrSat) ANOVA Results:
 The result of the ANOVA was significant instr (F[2,5806] = 22.44, p < 0.001, η2 = 0.007) and class (F[11,5806] = 14.66, p < 0.001, η2 = 0.03)  
+
 DV2 (CourseSat) ANOVA Results:
 The result of the ANOVA was significant instr (F[2,5806] = 57.29, p < 0.001, η2 = 0.02) and class (F[11,5806] = 8.51, p < 0.001, η2 = 0.03)  
 
@@ -144,14 +141,15 @@ Figure 10
 ![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/dca7b8e6-fa3c-46e1-b39d-d1cdee851bb9)
 
 
-Figure 11
+THSD Result 1
 
 ![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/580a1ef8-1a2a-4333-8184-0aa37076a35b)
 
 
-Figure 12
+THSD Result 2
 
-Following the results of significance from manova and the individual anovas, a comparison was done on the type of instructors and the type of courses for both DVs using a post-hoc test called Tukey HSD. The exact results can be seen in figures 11 and 12. The Tukey HSD test seek to communicate where the significant difference may lie within the significant independent variables..
+Following the results of significance from manova and the individual anovas, a comparison was done on the type of instructors and the type of courses for both DVs using a post-hoc test called Tukey HSD. The exact results can be seen in THSD result 1 and 2. The Tukey HSD test seek to communicate where the significant difference may lie within the significant independent variables.
+
 Based on the post-hoc tests it appears that students assigned to instructor 2 was more satisfied with their instructor than students from other instructors. Students assigned to instructor 1 was more satisfied with their course than students from other instructors.
 
 The post-hoc tests also revealed that students on course 8 was more satisfied with their instructor than students from other courses and students on course 9 & 10 was more satisfied with their course than students on other courses. 
@@ -184,7 +182,138 @@ Since the analysis results indicate that the type of instructor and the course s
 
 
 
+
 ## Section 2 - Company B (Predictive Statistics)
+
+### Introduction
+Being a part of the finance industry means that the German-Hellenic bank face stiff competition amongst competitors on all fronts. With this in mind, anonymised data of clients was collected for an analysis. The aim of this report is to produce statistical information that can be used by the company’s marketing department to better understand their clients and to build more attractive services for customers. 
+
+##### Dataset Details
+This data comprise of information for 45,211 (observations) clients, with in it personal demographics, responses and opinions was captured for 17 fields (variables).
+
+![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/ab7cec82-6248-4117-973a-add31f130eb6)
+
+
+Figure 11
+
+The chart above is a visual representation of the age of all clients in the dataset. Based on this chart, it appears that the analysis to follow may be most applicable to middle aged clients as the dataset mostly comprise of clients between 30 to 50 years old.
+
+![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/401450d0-3dcb-42b6-9f64-0b77df1b003c)
+
+
+Figure 12
+
+The chart above is a visual representation of clients with or without a housing loan. It appears that the dataset has a fairly good proportion of both groups of clients. This will aid the statistical power the analysis outcome because of the high number of observations.
+
+### Process
+After a visual assessment of the data, variable 12 (duration) captured information and responses that can affect variable 17 (y) and cause there to be a bit of correlation between them. Since this can skew the performance of the model, variable 12 was removed before continuing the analysis. 
+
+##### Multiple Linear Regression Modelling 
+Multiple linear regression modelling was chosen because it can help “to make predictions, recognize patterns, and categorize objects” (R, 2021) on the dataset. In preparation for building a model, the data was first tested for any redundant data (this yield no results) and then split into a train (dftrain) and a test dataset (dftest). Although overfitting is unlikely due to the large number of observations (clients) recorded in the dataset, splitting the dataset helps the test to get a realistic evaluation of the model against data that are not a part of the trained data.
+
+Arising out of this split two separate datasets was created; dftrain with 80% & dftest with 20%. A full model was then built with ‘Age’ as the outcome variable and all other variables (except variable 12) as predictors. The model identified numerous predictors that vary in significance. Subsequently, to have the best fitting model for the data, the stepwise method was used to create a final model that has only the most impactful predictors from the full model.
+
+This model was named ‘linstep’ and consist of the following variables
+![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/9c991f4a-6def-45dc-b680-d4f054bfd140)
+
+##### Binary Logistic Regression Modelling 
+Binary logistic regression modelling was chosen to build the second model around “housing” because it helps to explore the relationship of predictors against the outcome variable (IBM, 2022) and also to access that relationship through probabilities (percentages). The first phase of this method was the same as the linear regression model method with the outcome variable instead being changed to ‘housing’. The final model consisted of the following variables.
+
+This model was named ‘logstep’ and consist of the following variables
+![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/de24542a-8b11-43e4-a670-73b9eac4de44)
+
+
+### Results
+Below is a summary of the regression models used.
+![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/e83d3337-8301-4e52-b478-9dc40314ffad)
+
+The BIC scores for both model 1 and 2 showcase these stepwise models as being best models in comparison to other. Model 1 was reduced to 9 predictors that explain 42% of the variance in clients’ age and model 2 to 10 predictors that explain 26% of the variance in housing loans on the training sets. Bayes Factor value represents how many times better the model is with fitting the data than the full models.
+
+The linear model was significant overall [F[34,36136] = 761.7, p < 0.001] and the predictors mentioned above for ‘linstep’ are all significant (see appendix 4 table 1 for t-values). 
+The logistic model was significant overall and some of the predictors were significant (shown in appendix 4 table 2 for z-values). 
+
+
+#### Linear Model Predictive Results
+
+As mentioned previously the dataset was split into two, with dftest being unused and the latter used for the model. To access the performance of the linstep model, its predictive ability was tested against unseen data (dftest). Against dftest, the model had an R-squared of 0.42 (same as the linstep model) and the predictions made of clients age was fairly good and in comparison to their actually age.
+
+![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/3729e8f9-7b43-4d9e-a16c-34122b2c05e1)
+
+ 
+Figure 13
+
+The diagram above visualizes the R-squared/performance of the model by plotting the predicted age of clients (predlin) with the actual age of clients (age) in dftest together to form a scatterplot. It also shows a positive linear relationship between predlin and age as the plots converge diagonally with the line of best fit. 
+
+![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/e0de2c5f-8e01-4c7b-9b8f-9cb41265a886)
+
+ 
+Figure 14
+
+The plot above shows that the area of variance is very small which reflects a high r squared. 
+This indicates that the model (linstep) built from dftrain was good at predicting client’s age in dftest.
+
+##### Parametric Assumptions:
+1.	Homoscedasticity
+
+![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/c5d2cd74-3206-4906-aa4f-c90ab936254a)
+
+
+Figure 15
+
+The scatterplot shows a typical fitted value vs. residual plot in which homoscedasticity is present.
+
+2.	Normality
+
+![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/d9a239e9-5a39-4894-adcf-e40c36d96ae8)
+
+
+Figure 16
+
+The Q-Q plot shows a normal distribution is followed.
+
+
+#### Logistic Model Predictive Results
+
+For the second model, the dataset was again split into two, with dftest being unused and the latter (dftrain) for the model. Log odds (coefficients) from the model was converted into probabilities. The summary of the probabilities show that generally the type of job, method of contact, the last month of contact and the outcome of the previous marketing campaign decreased the likelihood of a client having a housing loan. However, the variables; jobblue-collar, contactunknown & monthmay greatly increased the likelihood of a client having a housing loan. This can be seen below. 
+
+![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/1f2ea1f0-14da-4c59-9afc-0bba874ad9af)
+
+Similar to the linRM to examine the predictive ability of the logstep model, it was tested against unseen data (dftest). The predictions made represented the probability of clients having a housing loan. These predictions were quite good and can be found in the “exploratory.csv” file.
+
+A confusion matrix is a great tool of LogRM as it is a summative table of the correct and incorrect predictions made. Before deriving the final confusion matrix table a roc curve chart was created to determine the best cut-off point for a more sensitive matrix. 
+
+![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/a26f9fad-14d2-46f5-a47f-a89942bd4994)
+
+
+Figure 17
+
+The chart above is a roc-curve of the outcome variable in the test set. The higher the point is on the y-axis, the more precisely it will (Vadakkanmarveettil, 2015) “measure the proportion of actual positives which are correctly identified” in the confusion matrix. Based on the chart above using 0.4 as the cut-off point will increase the amount of positive predictions. Since the aim of this analysis is to determine what variables can make the most accurate predictions for clients’ age, having a more sensitive matrix will align with this aim and can be seen in table below.
+
+##### Confusion Matrix
+
+![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/f2e62d37-e1bb-415a-910b-1f78ea0dcfd2)
+
+
+###### 0 = clients without a housing loan	TN = True Negative	FP = False Positive
+###### 1 = clients with a housing loan	FN = False Negative	TP = True Positive
+
+
+Finally statistical measures was executed to show the model’s performance.
+
+![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/46960e95-aeb9-4fab-8ac7-47b6c8e6f4cf)
+
+
+##### Parametric Assumptions:
+
+1.	Multicollinearity 
+VIF values for the predictors in the logstep model are all less than 5, which means that there is no significant relationship between the predictors.
+
+2.	Extreme Outliners
+
+![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/643fd988-e0a8-46bf-afe7-deb23408ce7c)
+
+ 
+There are outliners however, they are not extreme.
 
 
 ## Section 2 - Results Assessment and Conclusions
