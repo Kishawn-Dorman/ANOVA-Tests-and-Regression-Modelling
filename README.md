@@ -8,17 +8,7 @@ As part of my business data analytics MSc module, I was tasked with analysing da
 
 Company B is a bank seeking data-driven recommendations for its marketing department. The data provided for this analysis is anonymised and constitutes variables relating to a past and recent marketing campaign. Using the predictive analytics a LINEAR and LOGISTIC regression model was built to identify the factors/variables that are great predictors of clients age and if a client has a housing loan.  
 
-## Abreviations
 
-instr - instructor type
-class - course type
-nb.repeat - number of times students took the test 
-PCA - Principal Component Analysis 
-MANOVA - Multivariate ANOVA
-linstep - linear model
-logstep - logistic model
-BIC - Bayesian Information Criterion 
-OV - Outcome Variable
 
 ## Section 1 - Company A (Descriptive Statistics)
 
@@ -59,7 +49,7 @@ Since the variables Q1 to Q28 acted as the measures for student satisfaction, po
 
 Figure 4
 
-The PCA then generated correlation scores for the 2 components based on the 28 survey questions. A raising out of the scores, component 2 scores correlated highly with Q1 to Q12 and component 1 Q13 to Q28. Based on the questions posed, Q1 to Q12 is focused on course satisfaction and Q13 to Q28 instructor satisfaction.  Both of the components was added to the dataset under the following variable names:
+The PCA then generated correlation scores for the 2 components based on the 28 survey questions. A raising out of the scores, component 2 scores correlated highly with Q1 to Q12 and component 1 Q13 to Q28. Based on the questions posed, Q1 to Q12 is focused on course satisfaction and Q13 to Q28 instructor satisfaction.  Both of the components was added to the "TSE Analysed.csv" dataset under the following variable names:
 -	Component 1 is “InstrSat”
 -	Component 2 is “CourseSat”
 
@@ -295,7 +285,7 @@ For the second model, the dataset was again split into two, with dftest being un
 
 ![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/1f2ea1f0-14da-4c59-9afc-0bba874ad9af)
 
-Similar to linstep, the predictive ability of logstep was tested against unseen data (dftest). The predictions made represented the probability of clients having a housing loan. These predictions were quite good and can be found in the “BMC analysed.csv” file.
+Similar to linstep, the predictive ability of logstep was tested against unseen data (dftest). The predictions made represented the probability of clients having a housing loan. These predictions were quite good and can be found in the “BMC Analysed.csv” dataset.
 
 A confusion matrix is a great tool as it reflects a summative table of the correct and incorrect predictions made. But, before deriving the final confusion matrix table a roc curve chart was created to determine the best cut-off point for a more sensitive matrix. 
 
