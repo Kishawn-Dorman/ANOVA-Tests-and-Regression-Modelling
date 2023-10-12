@@ -17,17 +17,17 @@ The aim of this report is to determine what factor(s) may/may not drive student 
 The “Turkiye Student Evaluation” dataset comprise of 5,820 (observations) student evaluation scores to 28 Likert-scale style questions (variables) and 5 other variables capturing the ‘instr’(instructor type), ‘class’(course type), ‘nb.repeat’ (number of times students took the test), their ‘attendance’ and the perceived ‘difficulty’ of the course by students. 
 
 ![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/85e7db6f-c6d8-4c7c-90d6-1cfe21d5881f)
- Figure 1
+Figure 1
 
 Figure 1 above shows that instructor 3 has almost two times (2x) the amount of students than instructor 1 & 2 combined. The credibility of instructor impact in the analysis may be weaken by this because of the unequal instructor groups.
 
 ![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/d9b1e2cd-e741-417a-97ac-1aafb39e9b84)
- Figure 2
+Figure 2
 
 Figure 2 above shows that there is an uneven range of student observations per course. The credibility of course (class) impact in the analysis may be weaken by this because of the unequal instructor groups.
 
 ![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/9b32cca7-33e8-4e7a-9cfa-c4c3e99ea0c3)
- Figure 3
+Figure 3
 
 Figure 3 above shows that the mean score given by student per question (28 survey questions) is option/answer 3. This suggest the answers may not be an accurate reflection of the student’s opinion. 
 
@@ -37,7 +37,7 @@ Figure 3 above shows that the mean score given by student per question (28 surve
 Since the variables Q1 to Q28 acted as the measures for student satisfaction, points of correlation was extracted from them using PCA (Principal Component Analysis) and then validated further with parallel analysis. Both of these tests identified 2 components that represent the main areas of focus for the 28 survey questions. In the scree plot diagram below components 1 and 2 both have a higher variance from the other components and a higher correlation to the 28 survey questions, as the elbow curve only begins to flatten at component 3.
 
 ![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/37ecad52-88d0-40d6-bff4-26afa726514d)
- Figure 4
+Figure 4
 
 The PCA then generated correlation scores for the 2 components based on the 28 survey questions. A raising out of the scores, component 2 scores correlated highly with Q1 to Q12 and component 1 Q13 to Q28. Based on the questions posed, Q1 to Q12 is focused on course satisfaction and Q13 to Q28 instructor satisfaction.  Both of the components was added to the dataset under the following variable names:
 -	Component 1 is “InstrSat”
@@ -61,10 +61,10 @@ For this analysis manova test will be used to identify significance if any and f
 The QQ plots below depicts points of InstrSat and CourseSat scores in a fairly straight line. The x-axis plots the theoretical quantiles with a mean 0 and standard deviation 2. At glance our assumptions of InstrSat and CourseSat scores all coming from a population that is normally distributed is fairly good.
 
 ![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/ae3f75b6-4241-4b15-92e8-2e79a04b2d3a)
- Figure 5: InstrSat (DV1)			
+Figure 5: InstrSat (DV1)			
 
 ![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/88758964-7fcf-4712-96ef-caef4c0bc8f5)
- Figure 6: CourseSat (DV2)
+Figure 6: CourseSat (DV2)
 
 ##### 2. Homogeneity of variance
 Boxplots (refer to appendix 3) was used to test homogeneity of the sample groups because the scores for both dependent variables are in the form of ordinal data. The boxplots showed that the sample groups’ sizes for the independent variables do not appear to be vastly unequal. This is a good sign and means that the sample groups are homogeneous the power of our test may not necessarily be decreased by biased results (a skewed F-statistic). 
