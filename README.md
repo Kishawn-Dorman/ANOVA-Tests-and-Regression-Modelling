@@ -10,7 +10,114 @@ Company B is a bank seeking data-driven recommendations for its marketing depart
 
 ## Results Assessment and Conclusions 
 
-### Company A 
+### Section 1 - Company A (Descriptive Statistics)
+
+#### Introduction
+The aim of this report is to determine what factor(s) may/may not drive student satisfaction for HigherEdCo Ltd. A data analytical approach will be applied on data from the “Turkiye Student Evaluation” dataset to access the effect of select variables on each other and ultimately on student satisfaction.
+
+##### Dataset Details 
+The “Turkiye Student Evaluation” dataset comprise of 5,820 (observations) student evaluation scores to 28 Likert-scale style questions (variables) and 5 other variables capturing the ‘instr’(instructor type), ‘class’(course type), ‘nb.repeat’ (number of times students took the test), their ‘attendance’ and the perceived ‘difficulty’ of the course by students. 
+
+![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/85e7db6f-c6d8-4c7c-90d6-1cfe21d5881f)
+ 
+Figure 1
+Figure 1 shows that instructor 3 has almost two times (2x) the amount of students than instructor 1 & 2 combined. The credibility of instructor impact in the analysis may be weaken by this because of the unequal instructor groups.
+ 
+Figure 2
+Figure 2 shows that there is an uneven range of student observations per course. The credibility of course (class) impact in the analysis may be weaken by this because of the unequal instructor groups.
+
+ 
+Figure 3
+Figure 3 shows that the mean score given by student per question (28 survey questions) is option/answer 3. This suggest the answers may not be an accurate reflection of the student’s opinion. 
+
+
+
+Process
+
+Modification of the Dataset
+Since the variables Q1 to Q28 acted as the measures for student satisfaction, points of correlation was extracted from them using PCA (Principal Component Analysis) and then validated further with parallel analysis. Both of these tests identified 2 components that represent the main areas of focus for the 28 survey questions. In the scree plot diagram below components 1 and 2 both have a higher variance from the other components and a higher correlation to the 28 survey questions, as the elbow curve only begins to flatten at component 3.
+ 
+Figure 4
+The PCA then generated correlation scores for the 2 components based on the 28 survey questions. A raising out of the scores, component 2 scores correlated highly with Q1 to Q12 and component 1 Q13 to Q28. Based on the questions posed, Q1 to Q12 is focused on course satisfaction and Q13 to Q28 instructor satisfaction.  Both of the components was added to the dataset under the following variable names:
+-	Component 1 is “InstrSat”
+-	Component 2 is “CourseSat”
+
+
+
+
+
+
+
+The test to follow will look at if the type of instructor and course students are assigned has an effect on student satisfaction as well as how much of an effect and the impact. The aforementioned will be broken up into two hypothesis, a null hypothesis (H0) and an alternative hypothesis (H1). The table below shows the name, classification and category of each variable followed by the two hypothesis.
+Variable	Classification	Category
+InstrSat	Numeric	Dependent Variable (DV)
+CourseSat	Numeric	Dependent Variable (DV)
+Instr	Categorical	Independent Variable (IV)
+Class	Categorical	Independent Variable (IV)
+InstrSat, CourseSat ~ Instr*Class
+(DV1, DV2 ~ IV1*IV2)
+
+H0: There is no effect of instr and/or class on InstrSat and CourseSat.
+H1: There is an effect of instr and/or class on InstrSat and CourseSat.
+
+Results
+
+Parametric Assumptions: For this analysis manova test will be used to identify significance if any and for this test a few parametric assumptions need to be met.
+-	Normality
+The QQ plots below depicts points of InstrSat and CourseSat scores in a fairly straight line. The x-axis plots the theoretical quantiles with a mean 0 and standard deviation 2. At glance our assumptions of InstrSat and CourseSat scores all coming from a population that is normally distributed is fairly good.
+         
+		Diagram 1: InstrSat (DV1)			Diagram 2: CourseSat (DV2)
+			Figure 5					Figure 6
+-	Homogeneity of variance
+Boxplots (refer to appendix 3) was used to test homogeneity of the sample groups because the scores for both dependent variables are in the form of ordinal data. The boxplots showed that the sample groups’ sizes for the independent variables do not appear to be vastly unequal. This is a good sign and means that the sample groups are homogeneous the power of our test may not necessarily be decreased by biased results (a skewed F-statistic). 
+The parametric assumptions of normality and equal sample group sizes have both been validated and means that hypothesis testing can now commence. 
+
+Multivariate Analysis:
+
+-	Multivariate ANOVA 
+After running the omnibus test, H1 was confirmed, resulting in H0 being rejected. Manova showed a significant main effect of instructor [F(2,5806) = 39.64, p < 0.001, V = 0.03]  and class [F(11,5806) = 11.55, p < 0.001, V = 0.04] on InstrSat and CourseSat. 
+
+Further investigation was carried out by running individual ANOVAs on the DVs. They showed that the results from both the MANOVA and ANOVAs confirmed instructors and courses having an effect on instructor and course satisfaction. However, the effect size (η2) and Pillai-Bartlet trace measurement (V) both indicate that their effect on these two dependent variables (DV) are minor.
+DV1 (InstrSat) ANOVA Results:
+The result of the ANOVA was significant instr (F[2,5806] = 22.44, p < 0.001, η2 = 0.007) and class (F[11,5806] = 14.66, p < 0.001, η2 = 0.03)  
+DV2 (CourseSat) ANOVA Results:
+The result of the ANOVA was significant instr (F[2,5806] = 57.29, p < 0.001, η2 = 0.02) and class (F[11,5806] = 8.51, p < 0.001, η2 = 0.03)  
+
+
+-	Confidence Intervals for Modelled ANOVAs
+Confidence intervals plots is another useful tool as it supports the significant results from our ANOVAs tests by visualizing the significant difference of DVs against each IV if any. Figure 7 & 8 show the estimated mean of student scores (InstrSat & CourseSat) for each instructor with a 95% confidence level (meaning that 95/100 the mean student score would fall in this confidence interval). 
+
+For figure 7, we found that students under instructor 1 and 3 had the same level of instructor satisfaction, whereas students under instructor 2 had a higher level of instructor satisfaction than instructor 1 & 3.
+
+ 
+Figure 7
+
+For figure 8, we found that the students from each instructor had different levels of course satisfaction. Students under instructor 1 had the highest level of course satisfaction and students under instructor 3 the lowest level of course satisfaction.
+
+ 
+Figure 8
+
+
+
+
+
+Figure 9 & 10 show the estimated mean of student scores (InstrSat & CourseSat) for each course with a 95% confidence level (meaning that 95/100 the mean student score would fall in this confidence interval). 
+
+For figure 9 we found that students shared fairly the same level of instructor satisfaction regardless of the course they were assigned. However, students from course 8 had the highest level of instructor satisfaction in comparison to the other courses.
+
+ 
+Figure 9
+
+For figure 10, we found that course satisfaction did vary depending on the course students were assigned. Students from course 2 & 10 had the highest level of course satisfaction in comparison to students from the other courses. However, as seen in figure 2, course 2 may not be very significant because of the difference in sample size when compared to course 10.
+ 
+Figure 10
+-	Tukey Honest Significant Difference (HSD) 
+Following the results of significance from manova and the individual anovas, a comparison was done on the type of instructors and the type of courses for both DVs using a post-hoc test called Tukey HSD. The exact results can be found in appendix 1 and 2. The Tukey HSD test seek to communicate where the significant difference may lie within the significant independent variables..
+Based on the post-hoc tests it appears that students assigned to instructor 2 was more satisfied with their instructor than students from other instructors. Students assigned to instructor 1 was more satisfied with their course than students from other instructors.
+The post-hoc tests also revealed that students on course 8 was more satisfied with their instructor than students from other courses and students on course 9 & 10 was more satisfied with their course than students on other courses. 
+
+
+
 #### Executive Summary 
 Higher education institutes are built to provide a learning platform for all students. Since learning is the focal point of these institutes, they have a vested interest in assessing their overall effectiveness. It has been revealed that student satisfaction is a KPI for a satisfactory learning platform for most higher education institutes. An analysis of data capturing students’ opinions on a specific educational institution revealed that depending on the type of instructor and/or course a student is assigned, their level of satisfaction with the educational institution can be affected. 
 
