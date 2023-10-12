@@ -24,11 +24,15 @@ Figure 1
 Figure 1 above shows that instructor 3 has almost two times (2x) the amount of students than instructor 1 & 2 combined. The credibility of instructor impact in the analysis may be weaken by this because of the unequal instructor groups.
 
 ![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/d9b1e2cd-e741-417a-97ac-1aafb39e9b84)
+
+
 Figure 2
 
 Figure 2 above shows that there is an uneven range of student observations per course. The credibility of course (class) impact in the analysis may be weaken by this because of the unequal instructor groups.
 
 ![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/9b32cca7-33e8-4e7a-9cfa-c4c3e99ea0c3)
+
+
 Figure 3
 
 Figure 3 above shows that the mean score given by student per question (28 survey questions) is option/answer 3. This suggest the answers may not be an accurate reflection of the student’s opinion. 
@@ -39,6 +43,8 @@ Figure 3 above shows that the mean score given by student per question (28 surve
 Since the variables Q1 to Q28 acted as the measures for student satisfaction, points of correlation was extracted from them using PCA (Principal Component Analysis) and then validated further with parallel analysis. Both of these tests identified 2 components that represent the main areas of focus for the 28 survey questions. In the scree plot diagram below components 1 and 2 both have a higher variance from the other components and a higher correlation to the 28 survey questions, as the elbow curve only begins to flatten at component 3.
 
 ![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/37ecad52-88d0-40d6-bff4-26afa726514d)
+
+
 Figure 4
 
 The PCA then generated correlation scores for the 2 components based on the 28 survey questions. A raising out of the scores, component 2 scores correlated highly with Q1 to Q12 and component 1 Q13 to Q28. Based on the questions posed, Q1 to Q12 is focused on course satisfaction and Q13 to Q28 instructor satisfaction.  Both of the components was added to the dataset under the following variable names:
@@ -63,9 +69,13 @@ For this analysis manova test will be used to identify significance if any and f
 The QQ plots below depicts points of InstrSat and CourseSat scores in a fairly straight line. The x-axis plots the theoretical quantiles with a mean 0 and standard deviation 2. At glance our assumptions of InstrSat and CourseSat scores all coming from a population that is normally distributed is fairly good.
 
 ![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/ae3f75b6-4241-4b15-92e8-2e79a04b2d3a)
+
+
 Figure 5: InstrSat (DV1)			
 
 ![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/88758964-7fcf-4712-96ef-caef4c0bc8f5)
+
+
 Figure 6: CourseSat (DV2)
 
 ##### 2. Homogeneity of variance
@@ -97,11 +107,15 @@ Confidence intervals plots is another useful tool as it supports the significant
 Figure 7 below, we found that students under instructor 1 and 3 had the same level of instructor satisfaction, whereas students under instructor 2 had a higher level of instructor satisfaction than instructor 1 & 3.
 
 ![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/60ee669c-62ee-464c-8e11-fb73b939d0d6)
+
+
 Figure 7
 
 Figure 8 below, we found that the students from each instructor had different levels of course satisfaction. Students under instructor 1 had the highest level of course satisfaction and students under instructor 3 the lowest level of course satisfaction.
 
 ![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/8564da4d-9f76-4aa8-8a60-0c2df94dc18a)
+
+
 Figure 8
 
 Figure 9 & 10 shows the estimated mean of student scores (InstrSat & CourseSat) for each course with a 95% confidence level (meaning that 95/100 the mean student score would fall in this confidence interval). 
@@ -109,23 +123,32 @@ Figure 9 & 10 shows the estimated mean of student scores (InstrSat & CourseSat) 
 For figure 9 below, we found that students shared fairly the same level of instructor satisfaction regardless of the course they were assigned. However, students from course 8 had the highest level of instructor satisfaction in comparison to the other courses.
 
 ![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/1e968579-75d7-486e-bf9d-640907a4a80e)
+
+
 Figure 9
 
 For figure 10 below, we found that course satisfaction did vary depending on the course students were assigned. Students from course 2 & 10 had the highest level of course satisfaction in comparison to students from the other courses. However, as seen in figure 2, course 2 may not be very significant because of the difference in sample size when compared to course 10.
  
 ![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/5041fd15-2cb8-463e-9f9b-82eda5985acc)
+
+
 Figure 10
 
 ##### Tukey Honest Significant Difference (HSD) 
 
 ![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/dca7b8e6-fa3c-46e1-b39d-d1cdee851bb9)
+
+
 Figure 11
 
 ![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/580a1ef8-1a2a-4333-8184-0aa37076a35b)
+
+
 Figure 12
 
 Following the results of significance from manova and the individual anovas, a comparison was done on the type of instructors and the type of courses for both DVs using a post-hoc test called Tukey HSD. The exact results can be seen in figures 11 and 12. The Tukey HSD test seek to communicate where the significant difference may lie within the significant independent variables..
 Based on the post-hoc tests it appears that students assigned to instructor 2 was more satisfied with their instructor than students from other instructors. Students assigned to instructor 1 was more satisfied with their course than students from other instructors.
+
 The post-hoc tests also revealed that students on course 8 was more satisfied with their instructor than students from other courses and students on course 9 & 10 was more satisfied with their course than students on other courses. 
 
 
