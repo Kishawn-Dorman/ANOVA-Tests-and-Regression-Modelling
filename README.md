@@ -18,19 +18,19 @@ The aim of this report is to determine what factor(s) may/may not drive student 
 ###### Dataset Details 
 The “Turkiye Student Evaluation” dataset comprise of 5,820 (observations) student evaluation scores to 28 Likert-scale style questions (variables) and 5 other variables capturing the ‘instr’(instructor type), ‘class’(course type), ‘nb.repeat’ (number of times students took the test), their ‘attendance’ and the perceived ‘difficulty’ of the course by students. 
 
-			![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/85e7db6f-c6d8-4c7c-90d6-1cfe21d5881f)
+![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/85e7db6f-c6d8-4c7c-90d6-1cfe21d5881f)
  
-											Figure 1
+Figure 1
 Figure 1 shows that instructor 3 has almost two times (2x) the amount of students than instructor 1 & 2 combined. The credibility of instructor impact in the analysis may be weaken by this because of the unequal instructor groups.
 
-			![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/d9b1e2cd-e741-417a-97ac-1aafb39e9b84)
+![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/d9b1e2cd-e741-417a-97ac-1aafb39e9b84)
 
- 											Figure 2
+Figure 2
 Figure 2 shows that there is an uneven range of student observations per course. The credibility of course (class) impact in the analysis may be weaken by this because of the unequal instructor groups.
 
-			![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/9b32cca7-33e8-4e7a-9cfa-c4c3e99ea0c3)
+![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/9b32cca7-33e8-4e7a-9cfa-c4c3e99ea0c3)
 
-											Figure 3
+Figure 3
 Figure 3 shows that the mean score given by student per question (28 survey questions) is option/answer 3. This suggest the answers may not be an accurate reflection of the student’s opinion. 
 
 
@@ -40,19 +40,16 @@ Figure 3 shows that the mean score given by student per question (28 survey ques
 ###### Modification of the Dataset
 Since the variables Q1 to Q28 acted as the measures for student satisfaction, points of correlation was extracted from them using PCA (Principal Component Analysis) and then validated further with parallel analysis. Both of these tests identified 2 components that represent the main areas of focus for the 28 survey questions. In the scree plot diagram below components 1 and 2 both have a higher variance from the other components and a higher correlation to the 28 survey questions, as the elbow curve only begins to flatten at component 3.
 
-			![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/37ecad52-88d0-40d6-bff4-26afa726514d)
+![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/37ecad52-88d0-40d6-bff4-26afa726514d)
 
-											Figure 4
+Figure 4
 The PCA then generated correlation scores for the 2 components based on the 28 survey questions. A raising out of the scores, component 2 scores correlated highly with Q1 to Q12 and component 1 Q13 to Q28. Based on the questions posed, Q1 to Q12 is focused on course satisfaction and Q13 to Q28 instructor satisfaction.  Both of the components was added to the dataset under the following variable names:
 -	Component 1 is “InstrSat”
 -	Component 2 is “CourseSat”
 
 The test to follow will look at if the type of instructor and course students are assigned has an effect on student satisfaction as well as how much of an effect and the impact. The aforementioned will be broken up into two hypothesis, a null hypothesis (H0) and an alternative hypothesis (H1). The table below shows the name, classification and category of each variable followed by the two hypothesis.
-Variable	Classification	Category
-InstrSat	Numeric		Dependent Variable (DV)
-CourseSat	Numeric		Dependent Variable (DV)
-Instr		Categorical	Independent Variable (IV)
-Class		Categorical	Independent Variable (IV)
+
+![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/9a7ff029-6095-4f58-b8e8-4e4317935479)
 
 	InstrSat, CourseSat ~ Instr*Class
 		(DV1, DV2 ~ IV1*IV2)
