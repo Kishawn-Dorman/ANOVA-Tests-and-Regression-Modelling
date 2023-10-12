@@ -93,6 +93,12 @@ The parametric assumptions of normality and equal sample group sizes have both b
 
 #### Multivariate Analysis
 ##### Multivariate ANOVA 
+
+                  Run a MANOVA test because its suited to running a test with 2 DV's and factor IV's.
+           Also running a regular ANOVA test multiple times can inflate type I errors. MANOVA avoids this. 
+                       fit <- manova(cbind(df$InstrSat, df$CourseSat) ~ df$instr + df$class)
+                       summary(fit)
+
 After running the omnibus test, H1 was confirmed, resulting in H0 being rejected. Manova showed a significant main effect of instructor [F(2,5806) = 39.64, p < 0.001, V = 0.03]  and class [F(11,5806) = 11.55, p < 0.001, V = 0.04] on InstrSat and CourseSat. 
 
 Further investigation was carried out by running individual ANOVAs on the DVs. They showed that the results from both the MANOVA and ANOVAs confirmed instructors and courses having an effect on instructor and course satisfaction. However, the effect size (η2) and Pillai-Bartlet trace measurement (V) both indicate that their effect on these two dependent variables (DV) are minor.
@@ -176,6 +182,10 @@ Since the analysis results indicate that the type of instructor and the course s
 - Outliners issue in normality assumption.
 - The data may not be an accurate representation of the opinions of students because of the data collection method (Likert-scale style questions) used.
 -	Loss of information because of the dimensionality reduction.
+
+
+
+## Section 2 - Company B (Predictive Statistics)
 
 
 ## Section 2 - Results Assessment and Conclusions
