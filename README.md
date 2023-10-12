@@ -345,6 +345,20 @@ The analysis has also revealed that external elements like the month and day sho
 - Linear correlation between independent variables (predictors) diminish their predictive power.
 - The data collected could be inaccurate or outdated which would skew the outcome of the analysis.
 
+## References
+Gunduz, G. & Fokoue, E. (2013). UCI Machine Learning Repository [[https://archive.ics.uci.edu]]. Irvine, CA: University of California, School of Information and Computer Science.
+S. Moro, P. Cortez and P. Rita. A Data-Driven Approach to Predict the Success of Bank Telemarketing. Decision Support Systems, Elsevier, 62:22-31, June 2014
+R, S., 2021. Data Flare Up. [Online] 
+Available at: https://www.dataflareup.com/why-use-linear-regression-models-instead-of-neural-networks/
+[Accessed 22 December 2022].
+
+IBM, 2022. What is logistic regression? [Online] 
+Available at: https://www.ibm.com/topics/logistic-regression
+[Accessed 22 December 2022].
+
+Vadakkanmarveettil, J., 2015. Sensitivity vs. Specificity in Logistic Regression. [Online] 
+Available at: https://www.jigsawacademy.com/sensitivity-vs-specificity-in-logistic-regression/
+[Accessed 03 January 2023].
 
 ## Skills and tools used
 - Exploratory Data Analysis (PCA, Univariate analysis, Bivariate analysis)
