@@ -8,6 +8,18 @@ As part of my business data analytics MSc module, I was tasked with analysing da
 
 Company B is a bank seeking data-driven recommendations for its marketing department. The data provided for this analysis is anonymised and constitutes variables relating to a past and recent marketing campaign. Using the predictive analytics a LINEAR and LOGISTIC regression model was built to identify the factors/variables that are great predictors of clients age and if a client has a housing loan.  
 
+## Abreviations
+
+instr - instructor type
+class - course type
+nb.repeat - number of times students took the test 
+PCA - Principal Component Analysis 
+MANOVA - Multivariate ANOVA
+linstep - linear model
+logstep - logistic model
+BIC - Bayesian Information Criterion 
+OV - Outcome Variable
+
 ## Section 1 - Company A (Descriptive Statistics)
 
 ### Introduction
@@ -229,8 +241,13 @@ Below is a summary of the regression models used.
 
 The BIC scores for both model 1 and 2 showcase these stepwise models as being best models in comparison to other. Model 1 was reduced to 9 predictors that explain 42% of the variance in clients’ age and model 2 to 10 predictors that explain 26% of the variance in housing loans on the training sets. Bayes Factor value represents how many times better the model is with fitting the data than the full models.
 
-The linear model was significant overall [F[34,36136] = 761.7, p < 0.001] and the predictors mentioned above for ‘linstep’ are all significant (see appendix 4 table 1 for t-values). 
-The logistic model was significant overall and some of the predictors were significant (shown in appendix 4 table 2 for z-values). 
+The linear model was significant overall [F[34,36136] = 761.7, p < 0.001] and the predictors mentioned above for ‘linstep’ are all significant. The logistic model was significant overall and some of the predictors were significant. The t-values for the linear model (linstep) and the z-values for the logistic model (logstep) shows this and can be seen below. 
+
+linstep model significant predictors
+![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/e8d3b435-a588-4da5-9092-b9a0dfdb469f)
+
+logstep model significant predictors
+![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/2f7c33d5-6b13-4e23-9cd8-f9cce4156b67)
 
 
 #### Linear Model Predictive Results
@@ -278,9 +295,9 @@ For the second model, the dataset was again split into two, with dftest being un
 
 ![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/1f2ea1f0-14da-4c59-9afc-0bba874ad9af)
 
-Similar to the linRM to examine the predictive ability of the logstep model, it was tested against unseen data (dftest). The predictions made represented the probability of clients having a housing loan. These predictions were quite good and can be found in the “exploratory.csv” file.
+Similar to linstep, the predictive ability of logstep was tested against unseen data (dftest). The predictions made represented the probability of clients having a housing loan. These predictions were quite good and can be found in the “BMC analysed.csv” file.
 
-A confusion matrix is a great tool of LogRM as it is a summative table of the correct and incorrect predictions made. Before deriving the final confusion matrix table a roc curve chart was created to determine the best cut-off point for a more sensitive matrix. 
+A confusion matrix is a great tool as it reflects a summative table of the correct and incorrect predictions made. But, before deriving the final confusion matrix table a roc curve chart was created to determine the best cut-off point for a more sensitive matrix. 
 
 ![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/a26f9fad-14d2-46f5-a47f-a89942bd4994)
 
@@ -339,11 +356,11 @@ The analysis results revealed that there are quite a few factors that can act as
 
 The analysis has also revealed that external elements like the month and day should most certainly be consider as they were both proven to be significant predictors to determining what kind clients are engaged. For example, a house loan promotion with low interest rates for clients under 30 years old can be ran at the end of the month. This would attract clients in blue-collar jobs because of its availability (as these clients typically receive their salary around that time) and because the majority of clients at this bank is under 30 years based on the data. 
 
-
 ### Limitations
 - The significance of the test may become biased as the p-value maybe affected by the normality issue.
 - Linear correlation between independent variables (predictors) diminish their predictive power.
 - The data collected could be inaccurate or outdated which would skew the outcome of the analysis.
+
 
 ## References
 Gunduz, G. & Fokoue, E. (2013). UCI Machine Learning Repository [[https://archive.ics.uci.edu]]. Irvine, CA: University of California, School of Information and Computer Science.
