@@ -55,8 +55,8 @@ The test to follow will look at if the type of instructor and course students ar
 
 ![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/9a7ff029-6095-4f58-b8e8-4e4317935479)
 
-InstrSat, CourseSat ~ Instr*Class
-(DV1, DV2 ~ IV1*IV2)
+InstrSat, CourseSat ~ Instr * Class
+(DV1, DV2 ~ IV1 * IV2)
 
 H0: There is no effect of instr and/or class on InstrSat and CourseSat.
 H1: There is an effect of instr and/or class on InstrSat and CourseSat.
