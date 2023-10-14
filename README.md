@@ -353,8 +353,12 @@ The analysis has also revealed that external elements like the month and day sho
 
 
 ## References
-Gunduz, G. & Fokoue, E. (2013). UCI Machine Learning Repository [[https://archive.ics.uci.edu]]. Irvine, CA: University of California, School of Information and Computer Science.
-S. Moro, P. Cortez and P. Rita. A Data-Driven Approach to Predict the Success of Bank Telemarketing. Decision Support Systems, Elsevier, 62:22-31, June 2014
+Gunduz, G. & Fokoue, E. (2013). UCI Machine Learning Repository 
+[[https://archive.ics.uci.edu]]. Irvine, CA: University of California, School of Information and Computer Science.
+
+S. Moro, P. Cortez and P. Rita. A Data-Driven Approach to Predict the Success of Bank
+Telemarketing. Decision Support Systems, Elsevier, 62:22-31, June 2014
+
 R, S., 2021. Data Flare Up. [Online] 
 Available at: https://www.dataflareup.com/why-use-linear-regression-models-instead-of-neural-networks/
 [Accessed 22 December 2022].
