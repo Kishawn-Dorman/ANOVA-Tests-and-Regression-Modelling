@@ -42,6 +42,10 @@ Figure 3 above shows that the mean score given by student per question (28 surve
 
 ### Process
 #### Modification of the Dataset
+As is the case with most analytical projects working with less variables are ideal for delivering clear and consistent insights. With this in mind the suitability of the 28 survey question variables for a factor analysis was tested using KMO. As shown in the table below all of the variables fall between the KMO range of 0.90 to 1.00 which suggest that the data is excellent for factor analysis.
+
+![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/67dfd5f5-a82e-4b88-880d-65f323e2ad07)
+
 Since the variables Q1 to Q28 acted as the measures for student satisfaction, points of correlation was extracted from them using PCA (Principal Component Analysis) and then validated further with parallel analysis. Both of these tests identified 2 components that represent the main areas of focus for the 28 survey questions. In the scree plot diagram below components 1 and 2 both have a higher variance from the other components and a higher correlation to the 28 survey questions, as the elbow curve only begins to flatten at component 3.
 
 ![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/37ecad52-88d0-40d6-bff4-26afa726514d)
@@ -49,7 +53,11 @@ Since the variables Q1 to Q28 acted as the measures for student satisfaction, po
 
 Figure 4
 
-The PCA then generated correlation scores for the 2 components based on the 28 survey questions. A raising out of the scores, component 2 scores correlated highly with Q1 to Q12 and component 1 Q13 to Q28. Based on the questions posed, Q1 to Q12 is focused on course satisfaction and Q13 to Q28 instructor satisfaction.  Both of the components was added to the "TSE Analysed.csv" dataset under the following variable names:
+The PCA then generated correlation scores for the 2 components based on the 28 survey questions. A raising out of the scores, component 2 scores correlated highly with Q1 to Q12 and component 1 Q13 to Q28 as shown in the table below.
+
+![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/8ed6762e-d6d7-431f-8b76-88f784bb6554)
+
+Based on the questions posed, Q1 to Q12 is focused on course satisfaction and Q13 to Q28 instructor satisfaction.  Both of the components was added to the "TSE Analysed.csv" dataset under the following variable names:
 -	Component 1 is “InstrSat”
 -	Component 2 is “CourseSat”
 
