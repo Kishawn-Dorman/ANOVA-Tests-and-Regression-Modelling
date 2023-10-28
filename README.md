@@ -76,7 +76,6 @@ H1: There is an effect of instr and/or class on InstrSat and CourseSat.
 For this analysis manova test will be used to identify significance if any and for this test a few parametric assumptions need to be met.
 
 ##### 1. Normality
-The QQ plots below depicts points of InstrSat and CourseSat scores in a fairly straight line. The x-axis plots the theoretical quantiles with a mean 0 and standard deviation 2. At glance our assumptions of InstrSat and CourseSat scores all coming from a population that is normally distributed is fairly good.
 
 ![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/ae3f75b6-4241-4b15-92e8-2e79a04b2d3a)
 
@@ -89,7 +88,6 @@ Figure 5: InstrSat (DV1)
 Figure 6: CourseSat (DV2)
 
 ##### 2. Homogeneity of variance
-Boxplots (refer to appendix 3) was used to test homogeneity of the sample groups because the scores for both dependent variables are in the form of ordinal data. The boxplots showed that the sample groups’ sizes for the independent variables do not appear to be vastly unequal. This is a good sign and means that the sample groups are homogeneous the power of our test may not necessarily be decreased by biased results (a skewed F-statistic). 
 
 ![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/0a72cc91-cb55-4ec5-852d-5c9784893b13)
 
