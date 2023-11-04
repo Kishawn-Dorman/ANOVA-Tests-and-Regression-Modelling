@@ -307,8 +307,8 @@ The chart above is a roc-curve of the outcome variable in the test set. The high
 ![image](https://github.com/Kishawn-Dorman/Business-Data-Analytics-Project/assets/146044118/f2e62d37-e1bb-415a-910b-1f78ea0dcfd2)
 
 
-###### 0 = clients without a housing loan	TN = True Negative	FP = False Positive
-###### 1 = clients with a housing loan	FN = False Negative	TP = True Positive
+0 = clients without a housing loan	TN = True Negative	FP = False Positive
+1 = clients with a housing loan	FN = False Negative	TP = True Positive
 
 
 Finally statistical measures was executed to show the model’s performance.
